@@ -46,15 +46,15 @@ Dentro da página deve ser criado um formulário simples que receba as informaç
 
 Os demais campos são:
 
-* **Nome completo do passageiro**: Um [campo de texto](https://mui.com/components/text-fields/) com name `fullname`, limite de 100 caracteres e requerido;
-* **CPF**: Um [campo de texto](https://mui.com/components/text-fields/) do tipo `number` com name `identification`, máscara do formato de CPF e requerido;
-* **Peso**: [campo de texto](https://mui.com/components/text-fields/) do tipo `number` com name `weight`, `endAdornment` escrito "gramas", limite de cinco caracteres e requerido;
+* **Nome completo do passageiro**: Um [campo de texto](https://mui.com/components/text-fields/) com name `fullname`, limite de 100 caracteres e obrigatório;
+* **CPF**: Um [campo de texto](https://mui.com/components/text-fields/) do tipo `number` com name `identification`, máscara do formato de CPF e obrigatório;
+* **Peso**: [campo de texto](https://mui.com/components/text-fields/) do tipo `number` com name `weight`, `endAdornment` escrito "gramas", limite de cinco caracteres e obrigatório;
 * **Problemas de saúde**: Um [campo de texto com múltiplas linhas](https://mui.com/components/text-fields/#multiline) com name `health_problems` e limite de 500 caracteres;
 * **Aceite**: Um [checkbox](https://mui.com/components/checkboxes/) obrigatório com o seguinte label: "Garanto que os dados indicados aqui são verdadeiros e que a inclusão ou omissão de dados podem causar o cancelamento da passagem."
 
 Todos os campos de texto devem ter variante `outlined`;
 
-No final, haverá um [botão](https://mui.com/components/buttons/) de variante `contained` com label "Finalizar compra" que envia os dados para o servidor. Deve ser enviado uma chamada para `https://alume-teste.free.beeceptor.com/buy-ticket` com o método `POST` com os dados do formulário no body com o seguinte formato:
+No final, haverá um [botão](https://mui.com/components/buttons/) de variante `contained` com label "Finalizar compra" que envia os dados para o servidor. Deve ser enviado uma chamada para `https://alume-teste.free.beeceptor.com/buy-ticket` com o método `POST` e os dados do formulário no body no seguinte formato:
 
 ```json
 {
